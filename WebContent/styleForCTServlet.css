@@ -1,0 +1,321 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 170, 255, 0.8), rgba(200, 230, 255, 0.85)), url('back.jpg') no-repeat;
+  	background-size: cover;
+  	background-position: center;
+  	background-attachment: fixed;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2, h4, p{
+  margin: 0;
+}
+
+.page{
+  background: #fff;
+  display: block;
+  margin: 3rem auto 3rem auto;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.page[size="A4"]{
+  width: 21cm;
+  height: 29.7cm;
+  overflow-x: hidden;
+}
+
+/* Top Section */
+.top-section {
+  color: #fff;
+  padding: 20px;
+  height: 115px;
+  background-color: #6a1b9a;
+}
+
+.top-section2{
+  color: #fff;
+  padding: 20px;
+  height: 115px;
+  background-color: #ff0000;
+}
+
+.top-section2 h2,
+.top-section h2{
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.top-section2 .address,
+.top-section .address{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.top-section2 .address-content,
+.top-section .address-content{
+  max-width: 275px;
+}
+
+.contact .contact-content{
+  max-width: 220px;
+  float: right;
+  margin-top: 32px;
+}
+
+.contact-content .email,
+.contact-content .number{
+  display: block;
+}
+
+.contact-content .email span,
+.contact-content .number span {
+  float: right;
+  margin-left: 30px;
+}
+
+/* Parcel ID */
+
+.parcel{
+  padding: 27px;
+  font-size: 20px;
+  font-weight: 400;
+  float: left;
+}
+
+.content-parcel{
+  padding: 35px;
+  font-size: 120px;
+  margin-bottom: 15px;
+  margin-top: 43px;
+  margin-right: -5px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.content-parcel2{
+  padding: 35px;
+  font-size: 95px;
+  color: red;
+  margin-bottom: 15px;
+  margin-top: 43px;
+  margin-right: -5px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.error{
+  padding: 15px;
+  font-size: 25px;
+  color: #6a1b9a;
+  margin-bottom: 10px;
+  margin-top: -46px;
+  margin-right: -5px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.recommend{
+  padding: 10px;
+  font-size: 30px;
+  color: black;
+  margin-bottom: 115px;
+  margin-top: -26px;
+  margin-right: -5px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Slip Table */
+
+.table {
+  padding: 0 20px;
+}
+
+.table table{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table table, th, td{
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #616161;
+  border-collapse: collapse;
+}
+
+.table tr th{
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.table tr td{
+  font-size: 25px;
+}
+
+.table table tr:first-child{
+  color: #fff;
+  background-color: #6a1b9a;
+}
+
+
+.table tr td:nth-child(2){
+  text-align: left;
+}
+
+/* Bottom Section */
+
+.bottom-section{
+  margin-top: 15px;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bottom-section .status-container {
+  width: 50%;
+  float: left;
+  max-width: 275px;
+}
+
+.bottom-section .status-content {
+  position: relative; /* Add this to make the positioning relative to the container */
+}
+
+#payment-status-container {
+  position: absolute;
+  bottom : 250%; /* Adjust the top position as needed */
+  left: 26%; /* Adjust the left position as needed */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.bottom-section .status-content h4{
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.bottom-section img {
+  position: absolute;
+  bottom : 255%; /* Adjust the top position as needed */
+  left: 70%; /* Adjust the left position as needed */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 157;
+  height: 76;
+}
+
+.bottom-section .img {
+  position: absolute;
+  bottom : 255%; /* Adjust the top position as needed */
+  left: 50%; /* Adjust the left position as needed */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 520;
+  height: 220;
+}
+
+.bottom-section .status.free::before,
+.bottom-section .status.paid::before{
+  padding : 5px 50px;
+  border-radius : 5px;
+  margin-bottom : 8px;
+  display : inline-block;
+  text-transform : uppercase;
+}
+
+.bottom-section .status.free::before{
+  content : "Unpaid";
+  background-color : #ef7c94;
+  font-size : 20px;
+}
+
+.bottom-section .status.paid::before{
+  content : "Paid";
+  left: 30px;
+  background-color : #ef7c94;
+  font-size : 20px;
+}
+
+.bottom-section .tnx{
+  text-align : center;
+  margin-top : 10px;
+}
+
+/* Print */
+.print {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-left: -200px;
+}
+
+.print .btn-print {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #6a1b9a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.print .btn-print:hover {
+  background-color: #8e24aa;
+}
+
+.home {
+  text-align: center;
+  margin-top: -58.5px;
+  margin-bottom: 20px;
+  margin-left: 194px;
+}
+
+.home .btn-home {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #6a1b9a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.home .btn-home:hover {
+  background-color: #8e24aa;
+}
+
+.home2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home2 .btn-home {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.home2 .btn-home:hover {
+  background-color: #8e24aa;
+}
+
+@media print {
+    body {
+      background-image: none !important;
+    }
+}

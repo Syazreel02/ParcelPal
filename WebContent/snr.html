@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+ <meta charset="utf-8"> 
+ <meta name = "viewport" content = "width = device-width, initial-scale = 1"> 
+ <title>Slip & Receipt Option</title> 
+ <link rel = "stylesheet" type = "text/css" href = "snr.css"> 
+  
+ <!-- box icons --> 
+ <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+  
+ <!-- google font --> 
+ <link rel="preconnect" href="https://fonts.googleapis.com"> 
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+<body> 
+ <!-- header --> 
+ <header class = "sticky">
+  <a href = "staff.html" class = logo><i class = 'bx bxs-home'></i>ParcelPal</a>
+   
+  <ul class = "navlist">  
+   <li><a href="addParcel.html">Add Parcel</a></li>
+   <li><a href="#organization">Manage Parcel</a></li>
+   <li><a href = "snr.html" class="active">Print Receipt</a></li>
+   <li><a href = "#contact">Report</a></li>
+   <li><a href = "#faq">Manage Account</a></li>
+  </ul> 
+   
+  <div class = "nav-icons"> 
+   <a href = "#overlay"><i class='bx bx-log-out' ></i>Logout</a>
+  </div>
+ </header>
+ 
+ <!-- home -->
+ 	<section class="home" id="home">
+	  <div class="home-text">
+	    <div class="home-text">
+	      <h1>Print The Customer's <span>Receipt</span><br> For Their Parcel!</h1>
+	      <div class="btn-container">
+	        <a href="printreceipt.jsp" class="btn">Print Receipt<i class='bx bxs-right-arrow'></i></a>
+	      </div>
+	    </div>
+	  </div>
+	
+	  <div class="home-png">
+	    <img src="r1.png">
+	  </div>
+	</section>
+	
+	<div class="overlay" id="logout-overlay">
+	  <div class="popup">
+	    <h2>Are you sure you want to logout?</h2>
+	    <div class="btn-group">
+	      <button class="btn cancel-btn" onclick="cancelLogout()">Cancel</button>
+	      <button class="btn logout-confirm-btn" onclick="confirmLogout()">Logout</button>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="logout-success-overlay" id="logout-success-overlay">
+	  <div class="logout-success-popup">
+	    <h2>You have successfully logged out!</h2>
+	    <p id="countdown">Redirecting to the homepage in 3 seconds...</p>
+	  </div>
+	</div>
+	 	
+	<script src = "https://unpkg.com/scrollreveal"></script>
+	 
+		 <!-- link to js --> 
+	<script src = "test6.js"></script>
+</body> 
+</html>

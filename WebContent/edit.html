@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="displayUpdate.css">
+<link rel="stylesheet" href="http://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<title>Display For Update Page</title>
+</head>
+<body>
+<div class="container">
+<section class="sticky">
+<a href="staff.html" class="logo"><i class="bx bxs-home"></i>ParcelPal</a>
+<ul class="navlist">
+<li><a href="Add.jsp">Add Parcel</a></li>
+<li><a href="ManageParcel.jsp">Manage Parcel</a></li>
+<li><a href="snr.html">Print Receipt</a></li>
+<li><a href="#contact">Report</a></li>
+<li><a href="#faq">Manage Account</a></li>
+</ul>
+<div class="nav-icons">
+<a href="#overlay"><i class="bx bx-log-out"></i>Logout</a>
+</div>
+</section>
+
+<header>Display The Data For Update Process</header>
+
+<form action="updateSuccess.jsp" class="reveal-form">
+<div class="form">
+<div class="details">
+<span class="title">Parcel's Details</span>
+
+<div class="fields">
+<div class="input-field">
+<label>Parcel ID:</label>
+<p>P1</p>
+<input type="hidden" name="parcelID" value="P1">
+</div>
+
+<div class="input-field">
+<label for="cname">Courier Name :</label>
+<select id="cname" name="courierName">
+<option value="J&T">J&T</option>
+<option value="POS LAJU">Pos Laju</option>
+<option value="NINJAVAN">Ninjavan</option>
+<option value="DHL">DHL</option>
+<option value="PGEON">Pgeon</option>
+<option value="GDEX">Gdex</option>
+<option value="CITYLINK">Citylink</option>
+<option value="LALAMOVE">Lalamove</option>
+</select>
+</div>
+
+<div class="input-field">
+<label>Date Delivered :</label>
+<input type="date" name="dateDelivered" value="2023-07-21" placeholder="Select the date delivered" required>
+</div>
+
+<div class="input-field">
+<label>Parcel's Weight (Kg):</label>
+<input type="text" name="weight" value="1.25" placeholder="Enter the parcel's weight" required pattern="^\d{1,3}(\.\d{1,2})?$" title="Please enter a valid number (eg. from 0 - 999.99)">
+</div>
+</div>
+</div>
+</div>
+
+<div class="details2">
+<span class="title">Customer's Details</span>
+
+<div class="fields">
+<div class="input-field">
+<label>Customer's Full Name :</label>
+<input type="text" name="custName" value="John Doe" maxlength="30" minlength="5" placeholder="Enter the customer's full name" required>
+</div>
+
+<div class="input-field">
+<label>Customer's Phone Number :</label>
+<input type="text" name="custPhoneNum" value="1234567890" maxlength="11" required pattern="[0-9]{10-11}" placeholder="Enter the customer's phone number">
+</div>
+
+<div class="input-field">
+<label for="payment">Payment Status :</label>
+<select id="payment" name="paymentStatus" required>
+<option value="Unpaid">Unpaid</option>
+<option value="Paid">Paid</option>
+</select>
+</div>
+
+<div class="input-field">
+<label>Track ID :</label>
+<input type="text" name="trackID" value="T123456" maxlength="10" placeholder="Enter the tracking ID" required>
+</div>
+</div>
+</div>
+
+<div class="details2">
+<span class="title">Staff's Details</span>
+
+<div class="fields">
+<div class="input-field">
+<label for="staffID">Staff's ID :</label>
+<select id="staffID" name="staffID">
+<option value="S123">S123</option>
+<option value="S124">S124</option>
+</select>
+</div>
+</div>
+
+<div class="button-container">
+<button class="submit-btn" type="submit" name="update">
+<span class="btnText">Update</span>
+<i class="bx bxl-upwork"></i>
+</button>
+<button class="reset-btn" type="reset">
+Reset
+<i class="bx bx-reset"></i>
+</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+
+<div class="overlay" id="logout-overlay">
+<div class="popup">
+<h2>Are you sure you want to logout?</h2>
+<div class="btn-group">
+<button class="btn cancel-btn" onclick="cancelLogout()">Cancel</button>
+<button class="btn logout-confirm-btn" onclick="confirmLogout()">Logout</button>
+</div>
+</div>
+</div>
+
+<div class="logout-success-overlay" id="logout-success-overlay">
+<div class="logout-success-popup">
+<h2>You have successfully logged out!</h2>
+<p id="countdown">Redirecting to the homepage in 3 seconds...</p>
+</div>
+</div>
+
+<script src="https://unpkg.com/scrollreveal@4.1.0/dist/scrollreveal.min.js"></script>
+<script src="test6.js"></script>
+</body>
+</html>

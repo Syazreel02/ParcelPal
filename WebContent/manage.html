@@ -1,0 +1,155 @@
+out.println("<html>");
+out.println("<head>");
+out.println("<meta charset='UTF-8'>");
+out.println("<meta http-equiv='X-UA-Compatible' content='IE=edge'>");
+out.println("<meta name='viewport' content='width=device-width, initial-scale=1'>");
+out.println("<link rel='stylesheet' href='displayUpdate.css'>");
+out.println("<link rel='stylesheet' href='http://unicons.iconscout.com/release/v4.0.0/css/line.css'>");
+out.println("<link rel='stylesheet' href='https://unpkg.com/boxicons@latest/css/boxicons.min.css'>");
+out.println("<title>Display For Update Page</title>");
+out.println("</head>");
+out.println("<body>");
+
+out.println("<div class='container'>");
+out.println("<section class='sticky'>");
+out.println("<a href='staff.html' class='logo'><i class='bx bxs-home'></i>ParcelPal</a>");
+out.println("<ul class='navlist'>");
+out.println("<li><a href='Add.jsp'>Add Parcel</a></li>");
+out.println("<li><a href='ManageParcel.jsp'>Manage Parcel</a></li>");
+out.println("<li><a href='snr.html'>Print Receipt</a></li>");
+out.println("<li><a href='#contact'>Report</a></li>");
+out.println("<li><a href='#faq'>Manage Account</a></li>");
+out.println("</ul>");
+out.println("<div class='nav-icons'>");
+out.println("<a href='#overlay'><i class='bx bx-log-out'></i>Logout</a>");
+out.println("</div>");
+out.println("</section>");
+
+out.println("<header>Display The Data For Update Process</header>");
+
+out.println("<form action='updateSuccess.jsp' class='reveal-form'>");
+out.println("<div class='form'>");
+out.println("<div class='details'>");
+out.println("<span class='title'>Parcel's Details</span>");
+
+out.println("<div class='fields'>");
+out.println("<div class='input-field'>");
+out.println("<label>Parcel ID:</label>");
+out.println("<p>"+ parcelID +"</p>");
+out.println("<input type='hidden' name='parcelID' value='"+ parcelID +"'>");
+out.println("</div>");
+
+out.println("<div class='input-field'>");
+out.println("<label for='cname'>Courier Name :</label>");
+out.println("<select id='cname' name='courierName'>");
+for (int a = 0; a < 8; a++) {
+	if (courierName.equalsIgnoreCase(courier[a]))
+		out.println("<option value='" + courier[a] + "' selected>" + courier[a] + "</option>");
+	else
+		out.println("<option value='" + courier[a] + "' selected>" + courier[a] + "</option>");
+}
+out.println("</select>");
+out.println("</div>");
+
+out.println("<div class='input-field'>");
+out.println("<label>Date Delivered :</label>");
+out.println("<input type='date' name='dateDelivered' value='" + dateDelivered + "' placeholder='Select the date delivered' required>");
+out.println("</div>");
+
+out.println("<div class='input-field'>");
+out.println("<label>Parcel's Weight (Kg):</label>");
+out.println("<input type='text' name='weight' value='" + weight + "' placeholder='Enter the parcel's weight' required pattern='^\\d{1,3}(\\.\\d{1,2})?$' title='Please enter a valid number (eg. from 0 - 999.99)'>");
+out.println("</div>");
+out.println("</div>");
+out.println("</div>");
+out.println("</div>");
+
+out.println("<div class='details2'>");
+out.println("<span class='title'>Customer's Details</span>");
+
+out.println("<div class='fields'>");
+out.println("<div class='input-field'>");
+out.println("<label>Customer's Full Name :</label>");
+out.println("<input type='text' name='custName' value='" + custName + "' maxlength='30' minlength='5' placeholder='Enter the customer's full name' required>");
+out.println("</div>");
+
+out.println("<div class='input-field'>");
+out.println("<label>Customer's Phone Number :</label>");
+out.println("<input type='text' name='custPhoneNum' value='" + custPhoneNum + "' maxlength='11' required pattern='[0-9]{10-11}' placeholder='Enter the customer's phone number'>");
+out.println("</div>");
+
+out.println("<div class='input-field'>");
+out.println("<label for='payment'>Payment Status :</label>");
+out.println("<select id='payment' name='paymentStatus' required>");
+if(paymentStatus.equalsIgnoreCase("PAID")) {
+	out.println("<option value='PAID' selected>PAID");
+	out.println("<option value='UNPAID'>UNPAID");
+}
+else {
+	out.println("<option value='PAID'>PAID");
+	out.println("<option value='UNPAID' selected>UNPAID");
+}
+out.println("</select>");
+out.println("</div>");
+
+out.println("<div class='input-field'>");
+out.println("<label>Track ID :</label>");
+out.println("<input type='text' name='trackID' value='" + trackID + "' maxlength='10' placeholder='Enter the tracking ID' required>");
+out.println("</div>");
+out.println("</div>");
+out.println("</div>");
+
+out.println("<div class='details2'>");
+out.println("<span class='title'>Staff's Details</span>");
+
+out.println("<div class='fields'>");
+out.println("<div class='input-field'>");
+out.println("<label for='staffID'>Staff's ID :</label>");
+out.println("<select id='staffID' name='staffID'>");
+for (int a = 0; a < i; a++) {
+	if (staffID.equalsIgnoreCase(staffIDs[a])) {
+	    out.println("<option value='" + staffIDs[a] + "' selected>" + staffIDs[a] + "</option>");
+	} else {
+	    out.println("<option value='" + staffIDs[a] + "'>" + staffIDs[a] + "</option>");
+	}
+}
+out.println("</select>");
+out.println("</div>");
+out.println("</div>");
+
+out.println("<div class='button-container'>");
+out.println("<button class='submit-btn' type='submit' name='update'>");
+out.println("<span class='btnText'>Update</span>");
+out.println("<i class='bx bxl-upwork'></i>");
+out.println("</button>");
+out.println("<button class='reset-btn' type='reset'>");
+out.println("Reset");
+out.println("<i class='bx bx-reset'></i>");
+out.println("</button>");
+out.println("</div>");
+out.println("</div>");
+out.println("</div>");
+out.println("</form>");
+out.println("</div>");
+
+out.println("<div class='overlay' id='logout-overlay'>");
+out.println("<div class='popup'>");
+out.println("<h2>Are you sure you want to logout?</h2>");
+out.println("<div class='btn-group'>");
+out.println("<button class='btn cancel-btn' onclick='cancelLogout()'>Cancel</button>");
+out.println("<button class='btn logout-confirm-btn' onclick='confirmLogout()'>Logout</button>");
+out.println("</div>");
+out.println("</div>");
+out.println("</div>");
+
+out.println("<div class='logout-success-overlay' id='logout-success-overlay'>");
+out.println("<div class='logout-success-popup'>");
+out.println("<h2>You have successfully logged out!</h2>");
+out.println("<p id='countdown'>Redirecting to the homepage in 3 seconds...</p>");
+out.println("</div>");
+out.println("</div>");
+
+out.println("<script src='https://unpkg.com/scrollreveal@4.1.0/dist/scrollreveal.min.js'></script>");
+out.println("<script src='test6.js'></script>");
+out.println("</body>");
+out.println("</html>");

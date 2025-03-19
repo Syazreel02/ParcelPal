@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(circle, #ffb138, #fbac30, #f7a826, #f2a31c, #ee9f0d);
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 30px 14%;
+  transition: all .50s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 33px;
+  font-weight: 700;
+}
+
+.logo i {
+  vertical-align: middle;
+  margin-right: 8px;
+  color: 1.1rem;
+  color: #C04000;
+}
+
+.navlist {
+  display: flex;
+  list-style: none;
+}
+
+.navlist a {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 30px;
+  transition: all .50s ease;
+  text-decoration: none;
+}
+
+.navlist a:hover {
+  color: #C04000;
+}
+
+.navlist a.active {
+  color: #C04000;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  background: #C04000;
+  border-radius: 3rem;
+  box-shadow: #ff9f0d 0px 1px 25px;
+}
+
+.nav-icons i {
+  vertical-align: middle;
+  font-size: 25px;
+  color: radial-gradient(circle, #ffb138, #fbac30, #f7a826, #f2a31c, #ee9f0d);
+  margin-right: 8px;
+  margin-left: 5px;
+  transition: all .50s ease;
+}
+
+.nav-icons i:hover {
+  transform: scale(1, 1);
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text {
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 50px;
+  color: black;
+}
+
+.text p {
+  font-size: 30px;
+  color: #707070;
+  margin-top: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+.search-bar {
+  width: 100%;
+  background: #7CB9E8;
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 150px;
+  font-size: 20px;
+  color: black;
+}
+
+::placeholder {
+  color: black;
+}
+
+.search-bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #58629b;
+  cursor: pointer;
+}

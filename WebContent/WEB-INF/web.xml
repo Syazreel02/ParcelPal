@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app>
+	<servlet>
+		<servlet-name>R1</servlet-name>
+		<servlet-class>package1.CustomerTracking</servlet-class>
+	</servlet>
+	<servlet>
+   		<servlet-name>R2</servlet-name>
+    	<servlet-class>package1.DisplayReceipt</servlet-class>
+  	</servlet>
+  	<servlet>
+   		<servlet-name>R3</servlet-name>
+    	<servlet-class>package1.addServlet</servlet-class>
+  	</servlet>
+  	<servlet>
+   		<servlet-name>R4</servlet-name>
+    	<servlet-class>package1.loginServlet</servlet-class>
+  	</servlet>
+	<servlet>
+   		<servlet-name>R5</servlet-name>
+    	<servlet-class>package1.registerServlet</servlet-class>
+  	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>R1</servlet-name>
+		<url-pattern>/CustomerTracking</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>R2</servlet-name>
+	    <url-pattern>/DisplayReceipt</url-pattern>
+  	</servlet-mapping>
+  	<servlet-mapping>
+		<servlet-name>R3</servlet-name>
+		<url-pattern>/addServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+   		<servlet-name>R4</servlet-name>
+    	<url-pattern>/loginServlet</url-pattern>
+  	</servlet-mapping>
+  	<servlet-mapping>
+   		<servlet-name>R5</servlet-name>
+    	<url-pattern>/registerServlet</url-pattern>
+  	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>CustomerTrack.jsp</welcome-file>
+		<welcome-file>printreceipt.jsp</welcome-file>
+		<welcome-file>Add.jsp</welcome-file>
+		<welcome-file>Login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
+</element>

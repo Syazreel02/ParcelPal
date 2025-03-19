@@ -1,0 +1,319 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+*{ 
+  padding : 0;
+  margin : 0; 
+  box-sizing : border-box;
+  font-family: 'Poppins', sans-serif; 
+  text-decoration : none;
+  scroll-behavior : smooth; 
+  scroll-padding-top : 3rem;
+}
+
+:root{ 
+  --main-color : #C04000;
+  --text-color : #fff; 
+  --other-color : #212121;
+  --second-color : #F0F8FF; 
+  --bg-color : linear-gradient(to right bottom, #f4843d, #ed7932, #e66d27, #df611c, #d85510);
+  --big-font : 4.5rem;
+  --h2-font : 2.6rem; 
+  --p-font : 1.1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+	
+}
+
+header{
+  position : fixed;
+  width : 100%;
+  top : 0;
+  right : 0;
+  z-index : 1000;
+  display : flex;
+  align-items : center;
+  justify-content : space-between;
+  background : transparent;
+  padding : 30px 14%;
+  transition : all .50s ease;
+}
+
+.logo{
+  display : flex;
+  align-items : center;
+  color : var(--text-color);
+  font-size : 33px;
+  font-weight : 700;
+}
+
+.logo i{
+  vertical-align : middle;
+  margin-right : 8px;
+  color : var(--main-color);
+}
+
+.navlist{
+  display : flex;
+  list-style: none;
+}
+
+.navlist a{
+  color : var(--text-color);
+  font-size : var(--p-font);
+  font-weight : 600;
+  margin : 0 30px;
+  transition : all .50s ease;
+}
+
+.navlist a:hover{
+  color : var(--main-color);
+}
+
+.navlist a.active{
+  color : var(--main-color);
+}
+
+.nav-icons{
+  display: flex;
+  align-items: center;
+  padding: 8px 36px;
+  background: #C04000;
+  border-radius: 3rem;
+  box-shadow: #ff9f0d 0px 1px 25px;
+}
+
+.nav-icons i{
+  vertical-align: middle;
+  font-size: 25px;
+  color: radial-gradient(circle, #ffb138, #fbac30, #f7a826, #f2a31c, #ee9f0d);
+  margin-right: 8px;
+  margin-left: 5px;
+  transition: all .50s ease;
+}
+
+.nav-icons i:hover{
+  transform: scale(1, 1);
+  color: #fff;
+}
+
+section{
+  padding : 70px 14% 60px;
+}
+
+.actbody {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  min-height: 100vh;
+  background: radial-gradient(circle, #ffb138, #fbac30, #f7a826, #f2a31c, #ee9f0d);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: -1px 0 0 0;
+  padding: 0 0 70px 0;
+  width: 100%;
+}
+
+
+.box{
+	position: relative;
+	width: 400px;
+	height: 440px;
+	background: transparent;
+	border: 2px solid rgba(255, 255, 255, .5);
+	border-radius: 20px;
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden; 
+	transform: scale(1);
+	transition: transform .5s ease, height .2s ease;
+	margin-top : 160px;
+	margin-bottom: 70px;
+}
+
+.box.active{
+	margin-top : 100px;
+	height: 700px;
+	width: 450px;
+}
+
+.box .form-box {
+	width: 100%;
+	padding: 40px;	
+}	
+
+.box .form-box.login{
+	transition: transform .18s ease;
+	transform: translateX(0);
+}
+
+.box.active .form-box.login{
+	transition: none;
+	transform: translateX(-500px);
+}
+
+.box .form-box.register{
+	position: absolute;
+	transition: none;
+	transform: translateX(500px);
+}
+
+.box.active .form-box.register{
+	transition: transform .18s ease;
+	transform: translateX(0);
+}
+
+.form-box h2 {
+	font-size: 2em;
+	color: white;
+	text-align: center;
+}
+
+.input-box {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid #F0F8FF;
+	margin: 30px 0;
+}
+
+.register-table{
+	position: relative;
+	width: 100%;
+	height: 70px;
+	margin: 30px 0 50px 0;
+	color: white;
+}
+
+.register-table table, td{
+	border: none;
+}
+.register-table input{
+	width: 100%;
+	height: 100%;
+	background: white;
+	border: black;
+	outline: none;
+	font-size: 1em;
+	color: black;
+	font-weight: 600;
+	padding: 0 35px 0 5px;
+}
+
+.input-box label{
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	font-size: 1em;
+	color: #F0F8FF;
+	font-weight: 500;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+	top: -5px;	
+}
+
+.input-box input{
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	color: black;
+	font-weight: 600;
+	padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+	position: absolute;
+	right: 8px;
+	font-size: 1.2em;
+	color: #F0F8FF;
+	line-height: 57px;
+}
+
+.remember-forgot{
+	font-size: .9em;
+	color:#F0F8FF;
+	font-weight: 500;
+	margin: -15px 0 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.remember-forgot label input{
+	accent-color: black;
+	margin-right: 3px;
+}
+
+.remember-forgot a{
+	color: #00FFFF;
+	text-decoration: none;
+}
+
+.remember-forgot a:hover{
+	text-decoration: underline;	
+}
+
+.btn{
+	width: 100%;
+	height: 45px;
+	background: black;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	curser: pointer;
+	font-size: 1em;
+	color: #fff;
+	font-weight: 500;
+}
+
+.login-register{
+	font-size: .9em;
+	color: #F0F8FF;
+	text-align: center;
+	font-weight: 500;
+	margin: 25px 0 10px;
+}
+
+.login-register p a{
+	color: #00FFFF;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.login-register p a:hover{
+	text-decoration: underline;
+}
+
+/* ... error message ... */
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 10px;
+    display: none; /* Hide the message by default */
+}
+
+.box.invalid .error-message {
+    display: block; /* Show the message when the box is marked as invalid */
+}
+
+.invalid {
+  border-color: red;
+}
+
